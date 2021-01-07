@@ -31,7 +31,7 @@ namespace ValorantOverlay.App.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ValorantStreamOverlay));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.recentGame3 = new System.Windows.Forms.Label();
             this.recentGame2 = new System.Windows.Forms.Label();
             this.recentGame1 = new System.Windows.Forms.Label();
@@ -41,26 +41,26 @@ namespace ValorantOverlay.App.Forms
             this.backgroundPic = new System.Windows.Forms.PictureBox();
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rankIconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPic)).BeginInit();
             this.contextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // mainPanel
             // 
-            this.panel1.Controls.Add(this.recentGame3);
-            this.panel1.Controls.Add(this.recentGame2);
-            this.panel1.Controls.Add(this.recentGame1);
-            this.panel1.Controls.Add(this.rankIconBox);
-            this.panel1.Controls.Add(this.rankPointsElo);
-            this.panel1.Controls.Add(this.rankingLabel);
-            this.panel1.Controls.Add(this.backgroundPic);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 143);
-            this.panel1.TabIndex = 0;
+            this.mainPanel.Controls.Add(this.recentGame3);
+            this.mainPanel.Controls.Add(this.recentGame2);
+            this.mainPanel.Controls.Add(this.recentGame1);
+            this.mainPanel.Controls.Add(this.rankIconBox);
+            this.mainPanel.Controls.Add(this.rankPointsElo);
+            this.mainPanel.Controls.Add(this.rankingLabel);
+            this.mainPanel.Controls.Add(this.backgroundPic);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(398, 143);
+            this.mainPanel.TabIndex = 0;
             // 
             // recentGame3
             // 
@@ -162,7 +162,7 @@ namespace ValorantOverlay.App.Forms
             this.settingsMenuItem.Name = "settingsMenuItem";
             this.settingsMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsMenuItem.Text = "Settings";
-            this.settingsMenuItem.Click += new System.EventHandler(this.settingsMenuItem_Click);
+            this.settingsMenuItem.Click += new System.EventHandler(this.SettingsMenuItem_Click);
             // 
             // ValorantStreamOverlay
             // 
@@ -170,14 +170,14 @@ namespace ValorantOverlay.App.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(398, 143);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ValorantStreamOverlay";
             this.Text = "Valorant Overlay";
             this.Load += new System.EventHandler(this.ValorantStreamOverlay_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rankIconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPic)).EndInit();
             this.contextMenu.ResumeLayout(false);
@@ -187,7 +187,7 @@ namespace ValorantOverlay.App.Forms
 
         #endregion
         public System.Windows.Forms.Label rankLabel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel mainPanel;
         public System.Windows.Forms.Label rankingLabel;
         public System.Windows.Forms.PictureBox rankIconBox;
         public System.Windows.Forms.Label rankPointsElo;
