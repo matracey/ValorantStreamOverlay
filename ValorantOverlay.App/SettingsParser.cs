@@ -44,22 +44,22 @@ namespace ValorantStreamOverlay
             switch (skinNumber)
             {
                 case 0:
-                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.backgroundv2;
+                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.BackgroundRed;
                     break;
                 case 1:
-                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.bluebackground;
+                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.BackgroundBlue;
                     break;
                 case 2:
-                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.lightbluebackground;
+                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.BackgroundLightBlue;
                     break;
                 case 3:
-                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.greenbackground;
+                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.BackgroundGreen;
                     break;
                 case 4:
-                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.purplebackground;
+                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.BackgroundPurple;
                     break;
                 case 5:
-                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.graybackground;
+                    LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.BackgroundGrey;
                     break;
                 case 6:
                     if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "references", "custom.png")))
@@ -68,7 +68,7 @@ namespace ValorantStreamOverlay
                     }
                     else
                     {
-                        LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.custom;
+                        LogicHandler.ValorantOver.backgroundPic.Image = Properties.Resources.BackgroundCustom;
                     }
                     break;
             }

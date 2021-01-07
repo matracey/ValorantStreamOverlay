@@ -61,21 +61,11 @@ namespace ValorantOverlay.App.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Anton_Regular {
-            get {
-                object obj = ResourceManager.GetObject("Anton_Regular", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap asdasd {
+        internal static System.Drawing.Bitmap BackgroundBlue {
             get {
-                object obj = ResourceManager.GetObject("asdasd", resourceCulture);
+                object obj = ResourceManager.GetObject("BackgroundBlue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +73,9 @@ namespace ValorantOverlay.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap backgroundv2 {
+        internal static System.Drawing.Bitmap BackgroundCustom {
             get {
-                object obj = ResourceManager.GetObject("backgroundv2", resourceCulture);
+                object obj = ResourceManager.GetObject("BackgroundCustom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +83,9 @@ namespace ValorantOverlay.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bluebackground {
+        internal static System.Drawing.Bitmap BackgroundGreen {
             get {
-                object obj = ResourceManager.GetObject("bluebackground", resourceCulture);
+                object obj = ResourceManager.GetObject("BackgroundGreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +93,9 @@ namespace ValorantOverlay.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap custom {
+        internal static System.Drawing.Bitmap BackgroundGrey {
             get {
-                object obj = ResourceManager.GetObject("custom", resourceCulture);
+                object obj = ResourceManager.GetObject("BackgroundGrey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +103,9 @@ namespace ValorantOverlay.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap graybackground {
+        internal static System.Drawing.Bitmap BackgroundLightBlue {
             get {
-                object obj = ResourceManager.GetObject("graybackground", resourceCulture);
+                object obj = ResourceManager.GetObject("BackgroundLightBlue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +113,9 @@ namespace ValorantOverlay.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap greenbackground {
+        internal static System.Drawing.Bitmap BackgroundPurple {
             get {
-                object obj = ResourceManager.GetObject("greenbackground", resourceCulture);
+                object obj = ResourceManager.GetObject("BackgroundPurple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,19 +123,9 @@ namespace ValorantOverlay.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lightbluebackground {
+        internal static System.Drawing.Bitmap BackgroundRed {
             get {
-                object obj = ResourceManager.GetObject("lightbluebackground", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap purplebackground {
-            get {
-                object obj = ResourceManager.GetObject("purplebackground", resourceCulture);
+                object obj = ResourceManager.GetObject("BackgroundRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
