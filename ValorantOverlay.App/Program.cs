@@ -3,11 +3,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.IO;
 using System.Reflection;
 using System.Text.Json;
 using System.Windows.Forms;
+using ValorantOverlay.App.Fonts;
 using ValorantOverlay.App.Forms;
+using ValorantOverlay.App.Helpers;
 using ValorantOverlay.App.Services;
 using ValorantOverlay.Core.Models;
 using ValorantOverlay.Core.Services;
@@ -72,6 +75,14 @@ namespace ValorantOverlay.App
 
             // ValorantOverlay.App.Services
             services.AddSingleton<IUpdateService, UpdateService>();
+
+            // ValorantOverlay.App.Fonts
+            services.AddSingleton(svc => {
+                var fonts = new PrivateFontCollection();
+                fonts.AddFontFromResource(Assembly.GetExecutingAssembly(), "ValorantOverlay.App.Resources.Anton-Regular.ttf");
+                return fonts;
+            });
+            services.AddSingleton<AntonRegular>();
 
             // ValorantOverlay.App.Forms
             services.AddScoped<ValorantStreamOverlay>();
