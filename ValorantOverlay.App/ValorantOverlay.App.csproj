@@ -26,6 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ValorantOverlay.Core\ValorantOverlay.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\Anton-Regular.ttf" />
     <Resource Include="Resources\TX_CompetitiveTierMovement_Demoted.png" />
     <Resource Include="Resources\TX_CompetitiveTierMovement_MajorDecrease.png" />

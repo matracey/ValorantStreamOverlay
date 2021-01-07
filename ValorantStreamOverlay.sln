@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValorantOverlay.App", "ValorantOverlay.App\ValorantOverlay.App.csproj", "{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValorantOverlay.Core", "ValorantOverlay.Core\ValorantOverlay.Core.csproj", "{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
