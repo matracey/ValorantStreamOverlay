@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
+using ValorantOverlay.App.Forms;
 
 namespace ValorantOverlay.App
 {
@@ -28,7 +29,7 @@ namespace ValorantOverlay.App
         public static int refreshTimeinSeconds;
         public Timer relogTimer, pointTimer;
 
-        public static ValorantOverStream ValorantOver;
+        public static ValorantStreamOverlay ValorantOver;
         public LogicHandler logic;
         public RankDetection rankDetect;
 
@@ -36,7 +37,7 @@ namespace ValorantOverlay.App
         public static int currentRankPoints, currentMMRorELO;
         private bool botEnabled;
 
-        public LogicHandler(ValorantOverStream instance)
+        public LogicHandler(ValorantStreamOverlay instance)
         {
             logic = this;
             ValorantOver = instance;

@@ -1,29 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ValorantOverlay.App
+namespace ValorantOverlay.App.Forms
 {
-    public partial class ValorantOverStream : Form
+    public partial class ValorantStreamOverlay : Form
     {
         
 
-        public ValorantOverStream()
+        public ValorantStreamOverlay()
         {
             InitializeComponent();
         }
 
         
 
-        private void ValorantOverStream_Load(object sender, EventArgs e)
+        private void ValorantStreamOverlay_Load(object sender, EventArgs e)
         {
             //Use the updator class to check if there is an update released.
             new Updator();
@@ -53,7 +47,7 @@ namespace ValorantOverlay.App
             rankPointsElo.Parent = backgroundPic;
             rankPointsElo.Font = new Font(pfc.Families[0], 18);
 
-            ValorantOverStream local = this;
+            ValorantStreamOverlay local = this;
             LogicHandler logic = new LogicHandler(local);
 
         }

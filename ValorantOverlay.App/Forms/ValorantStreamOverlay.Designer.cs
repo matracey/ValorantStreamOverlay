@@ -1,7 +1,7 @@
 ﻿
-namespace ValorantOverlay.App
+namespace ValorantOverlay.App.Forms
 {
-    partial class ValorantOverStream
+    partial class ValorantStreamOverlay
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +30,7 @@ namespace ValorantOverlay.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ValorantOverStream));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ValorantStreamOverlay));
             this.panel1 = new System.Windows.Forms.Panel();
             this.recentGame3 = new System.Windows.Forms.Label();
             this.recentGame2 = new System.Windows.Forms.Label();
@@ -164,7 +164,7 @@ namespace ValorantOverlay.App
             this.settingsMenuItem.Text = "Settings";
             this.settingsMenuItem.Click += new System.EventHandler(this.settingsMenuItem_Click);
             // 
-            // ValorantOverStream
+            // ValorantStreamOverlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,9 +173,9 @@ namespace ValorantOverlay.App
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ValorantOverStream";
+            this.Name = "ValorantStreamOverlay";
             this.Text = "Valorant Overlay";
-            this.Load += new System.EventHandler(this.ValorantOverStream_Load);
+            this.Load += new System.EventHandler(this.ValorantStreamOverlay_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rankIconBox)).EndInit();
