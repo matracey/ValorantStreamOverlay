@@ -17,7 +17,7 @@ namespace ValorantOverlay.App
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(true);
 
             var builder = new HostBuilder()
                .ConfigureServices((hostContext, services) =>
