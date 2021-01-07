@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Windows.Forms;
 using ValorantOverlay.App.Forms;
+using ValorantOverlay.App.Services;
 
 namespace ValorantOverlay.App
 {
@@ -45,6 +46,9 @@ namespace ValorantOverlay.App
 
         private static void ConfigureServices(IServiceCollection services)
         {
+            // ValorantOverlay.App.Services
+            services.AddSingleton<IUpdateService, UpdateService>();
+
             // ValorantOverlay.App.Forms
             services.AddScoped<ValorantStreamOverlay>();
         }
