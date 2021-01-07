@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ValorantStreamOverlay
+namespace ValorantOverlay.App
 {
     static class Program
     {

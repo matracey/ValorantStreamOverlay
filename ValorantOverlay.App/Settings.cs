@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ValorantStreamOverlay
+namespace ValorantOverlay.App
 {
     public partial class Settings : Form
     {

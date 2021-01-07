@@ -11,7 +11,7 @@ using TwitchLib.Client.Models;
 using TwitchLib.Communication.Clients;
 using TwitchLib.Communication.Models;
 
-namespace ValorantStreamOverlay
+namespace ValorantOverlay.App
 {
     class TwitchIntegration
     {

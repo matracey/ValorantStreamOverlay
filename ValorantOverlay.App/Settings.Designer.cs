@@ -1,5 +1,5 @@
 ﻿
-namespace ValorantStreamOverlay
+namespace ValorantOverlay.App
 {
     partial class Settings
     {

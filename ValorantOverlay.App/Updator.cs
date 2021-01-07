@@ -4,7 +4,7 @@ using System.Text;
 using AutoUpdaterDotNET;
 using Newtonsoft.Json;
 
-namespace ValorantStreamOverlay
+namespace ValorantOverlay.App
 {
     class Updator
     {
