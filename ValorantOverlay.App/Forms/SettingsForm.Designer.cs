@@ -1,5 +1,5 @@
 ﻿
-namespace ValorantOverlay.App
+namespace ValorantOverlay.App.Forms
 {
     partial class SettingsForm
     {
@@ -30,108 +30,75 @@ namespace ValorantOverlay.App
         private void InitializeComponent()
         {
             this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.applyButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.regionDrop = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ski = new System.Windows.Forms.ComboBox();
-            this.skinDrop = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.refreshDrop = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.twitchChannelname = new System.Windows.Forms.TextBox();
-            this.twitchbotUsername = new System.Windows.Forms.TextBox();
-            this.twitchBotToken = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.twitchBotCheck = new System.Windows.Forms.CheckBox();
+            this.regionLabel = new System.Windows.Forms.Label();
+            this.regionDropdown = new System.Windows.Forms.ComboBox();
+            this.skinLabel = new System.Windows.Forms.Label();
+            this.skinDropdown = new System.Windows.Forms.ComboBox();
+            this.refreshLabel = new System.Windows.Forms.Label();
+            this.refreshDropdown = new System.Windows.Forms.ComboBox();
+            this.twitchBotSettingsSectionLabel = new System.Windows.Forms.Label();
+            this.twitchBotCheckbox = new System.Windows.Forms.CheckBox();
+            this.twitchChannelNameTextbox = new System.Windows.Forms.TextBox();
+            this.twitchbotUsernameTextbox = new System.Windows.Forms.TextBox();
+            this.twitchBotTokenTextbox = new System.Windows.Forms.TextBox();
+            this.applyButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(23, 11);
+            this.usernameTextBox.Location = new System.Drawing.Point(20, 10);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.PlaceholderText = "Riot Games Username";
-            this.usernameTextBox.Size = new System.Drawing.Size(199, 23);
+            this.usernameTextBox.Size = new System.Drawing.Size(200, 23);
             this.usernameTextBox.TabIndex = 0;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Location = new System.Drawing.Point(120, 299);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 1;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            // 
-            // applyButton
-            // 
-            this.applyButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.applyButton.Location = new System.Drawing.Point(39, 299);
-            this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(75, 23);
-            this.applyButton.TabIndex = 2;
-            this.applyButton.Text = "APPLY";
-            this.applyButton.UseVisualStyleBackColor = true;
-            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(23, 40);
+            this.passwordTextBox.Location = new System.Drawing.Point(20, 40);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.PlaceholderText = "Riot Games Password";
-            this.passwordTextBox.Size = new System.Drawing.Size(199, 23);
+            this.passwordTextBox.Size = new System.Drawing.Size(200, 23);
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
-            // regionDrop
+            // regionLabel
             // 
-            this.regionDrop.FormattingEnabled = true;
-            this.regionDrop.Items.AddRange(new object[] {
+            this.regionLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.regionLabel.Location = new System.Drawing.Point(20, 70);
+            this.regionLabel.Name = "regionLabel";
+            this.regionLabel.Size = new System.Drawing.Size(65, 23);
+            this.regionLabel.TabIndex = 5;
+            this.regionLabel.Text = "Region:";
+            // 
+            // regionDropdown
+            // 
+            this.regionDropdown.FormattingEnabled = true;
+            this.regionDropdown.Items.AddRange(new object[] {
             "North America | LATAM",
             "Europe",
             "Korea",
             "Asia Pacific"});
-            this.regionDrop.Location = new System.Drawing.Point(88, 69);
-            this.regionDrop.Name = "regionDrop";
-            this.regionDrop.Size = new System.Drawing.Size(134, 23);
-            this.regionDrop.TabIndex = 4;
+            this.regionDropdown.Location = new System.Drawing.Point(90, 70);
+            this.regionDropdown.Name = "regionDropdown";
+            this.regionDropdown.Size = new System.Drawing.Size(130, 23);
+            this.regionDropdown.TabIndex = 4;
             // 
-            // label1
+            // skinLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(23, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Region:";
+            this.skinLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.skinLabel.Location = new System.Drawing.Point(20, 100);
+            this.skinLabel.Name = "skinLabel";
+            this.skinLabel.Size = new System.Drawing.Size(65, 23);
+            this.skinLabel.TabIndex = 6;
+            this.skinLabel.Text = "Skin:";
             // 
-            // label2
+            // skinDropdown
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(23, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Skin:";
-            // 
-            // ski
-            // 
-            this.ski.FormattingEnabled = true;
-            this.ski.Location = new System.Drawing.Point(137, 129);
-            this.ski.Name = "ski";
-            this.ski.Size = new System.Drawing.Size(134, 23);
-            this.ski.TabIndex = 7;
-            // 
-            // skinDrop
-            // 
-            this.skinDrop.FormattingEnabled = true;
-            this.skinDrop.Items.AddRange(new object[] {
+            this.skinDropdown.FormattingEnabled = true;
+            this.skinDropdown.Items.AddRange(new object[] {
             "Default Red",
             "Blue",
             "Light Blue",
@@ -139,109 +106,118 @@ namespace ValorantOverlay.App
             "Purple",
             "Gray",
             "Custom"});
-            this.skinDrop.Location = new System.Drawing.Point(88, 100);
-            this.skinDrop.Name = "skinDrop";
-            this.skinDrop.Size = new System.Drawing.Size(134, 23);
-            this.skinDrop.TabIndex = 7;
+            this.skinDropdown.Location = new System.Drawing.Point(90, 100);
+            this.skinDropdown.Name = "skinDropdown";
+            this.skinDropdown.Size = new System.Drawing.Size(130, 23);
+            this.skinDropdown.TabIndex = 7;
             // 
-            // label3
+            // refreshLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(23, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Refresh:";
+            this.refreshLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.refreshLabel.Location = new System.Drawing.Point(20, 130);
+            this.refreshLabel.Name = "refreshLabel";
+            this.refreshLabel.Size = new System.Drawing.Size(65, 23);
+            this.refreshLabel.TabIndex = 8;
+            this.refreshLabel.Text = "Refresh:";
             // 
-            // refreshDrop
+            // refreshDropdown
             // 
-            this.refreshDrop.FormattingEnabled = true;
-            this.refreshDrop.Items.AddRange(new object[] {
+            this.refreshDropdown.FormattingEnabled = true;
+            this.refreshDropdown.Items.AddRange(new object[] {
             "30 Seconds",
             "60 Seconds"});
-            this.refreshDrop.Location = new System.Drawing.Point(88, 131);
-            this.refreshDrop.Name = "refreshDrop";
-            this.refreshDrop.Size = new System.Drawing.Size(134, 23);
-            this.refreshDrop.TabIndex = 9;
+            this.refreshDropdown.Location = new System.Drawing.Point(90, 130);
+            this.refreshDropdown.Name = "refreshDropdown";
+            this.refreshDropdown.Size = new System.Drawing.Size(130, 23);
+            this.refreshDropdown.TabIndex = 9;
             // 
-            // label4
+            // twitchBotSettingsSectionLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(23, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Twitch Bot Settings:";
+            this.twitchBotSettingsSectionLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.twitchBotSettingsSectionLabel.Location = new System.Drawing.Point(20, 160);
+            this.twitchBotSettingsSectionLabel.Name = "twitchBotSettingsSectionLabel";
+            this.twitchBotSettingsSectionLabel.Size = new System.Drawing.Size(200, 20);
+            this.twitchBotSettingsSectionLabel.TabIndex = 10;
+            this.twitchBotSettingsSectionLabel.Text = "Twitch Bot Settings:";
+            this.twitchBotSettingsSectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // twitchChannelname
+            // twitchBotCheckbox
             // 
-            this.twitchChannelname.Location = new System.Drawing.Point(23, 212);
-            this.twitchChannelname.Name = "twitchChannelname";
-            this.twitchChannelname.PlaceholderText = "Twitch Channel Name";
-            this.twitchChannelname.Size = new System.Drawing.Size(199, 23);
-            this.twitchChannelname.TabIndex = 11;
+            this.twitchBotCheckbox.Location = new System.Drawing.Point(20, 190);
+            this.twitchBotCheckbox.Name = "twitchBotCheckbox";
+            this.twitchBotCheckbox.Size = new System.Drawing.Size(200, 20);
+            this.twitchBotCheckbox.TabIndex = 18;
+            this.twitchBotCheckbox.Text = "Enable Twitch Bot?";
+            this.twitchBotCheckbox.UseVisualStyleBackColor = true;
             // 
-            // twitchbotUsername
+            // twitchChannelNameTextbox
             // 
-            this.twitchbotUsername.Location = new System.Drawing.Point(23, 241);
-            this.twitchbotUsername.Name = "twitchbotUsername";
-            this.twitchbotUsername.PlaceholderText = "Twitch Bot Username";
-            this.twitchbotUsername.Size = new System.Drawing.Size(199, 23);
-            this.twitchbotUsername.TabIndex = 12;
+            this.twitchChannelNameTextbox.Location = new System.Drawing.Point(20, 220);
+            this.twitchChannelNameTextbox.Name = "twitchChannelNameTextbox";
+            this.twitchChannelNameTextbox.PlaceholderText = "Twitch Channel Name";
+            this.twitchChannelNameTextbox.Size = new System.Drawing.Size(200, 23);
+            this.twitchChannelNameTextbox.TabIndex = 11;
             // 
-            // twitchBotToken
+            // twitchbotUsernameTextbox
             // 
-            this.twitchBotToken.Location = new System.Drawing.Point(23, 270);
-            this.twitchBotToken.Name = "twitchBotToken";
-            this.twitchBotToken.PasswordChar = '*';
-            this.twitchBotToken.PlaceholderText = "Twitch Bot Token";
-            this.twitchBotToken.Size = new System.Drawing.Size(199, 23);
-            this.twitchBotToken.TabIndex = 13;
-            this.twitchBotToken.UseSystemPasswordChar = true;
+            this.twitchbotUsernameTextbox.Location = new System.Drawing.Point(20, 250);
+            this.twitchbotUsernameTextbox.Name = "twitchbotUsernameTextbox";
+            this.twitchbotUsernameTextbox.PlaceholderText = "Twitch Bot Username";
+            this.twitchbotUsernameTextbox.Size = new System.Drawing.Size(200, 23);
+            this.twitchbotUsernameTextbox.TabIndex = 12;
             // 
-            // label5
+            // twitchBotTokenTextbox
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 191);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 15);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Turn On Bot?:";
+            this.twitchBotTokenTextbox.Location = new System.Drawing.Point(20, 280);
+            this.twitchBotTokenTextbox.Name = "twitchBotTokenTextbox";
+            this.twitchBotTokenTextbox.PasswordChar = '*';
+            this.twitchBotTokenTextbox.PlaceholderText = "Twitch Bot Token";
+            this.twitchBotTokenTextbox.Size = new System.Drawing.Size(200, 23);
+            this.twitchBotTokenTextbox.TabIndex = 13;
+            this.twitchBotTokenTextbox.UseSystemPasswordChar = true;
             // 
-            // twitchBotCheck
+            // applyButton
             // 
-            this.twitchBotCheck.AutoSize = true;
-            this.twitchBotCheck.Location = new System.Drawing.Point(134, 190);
-            this.twitchBotCheck.Name = "twitchBotCheck";
-            this.twitchBotCheck.Size = new System.Drawing.Size(61, 19);
-            this.twitchBotCheck.TabIndex = 18;
-            this.twitchBotCheck.Text = "Enable";
-            this.twitchBotCheck.UseVisualStyleBackColor = true;
+            this.applyButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.applyButton.Location = new System.Drawing.Point(40, 310);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(75, 23);
+            this.applyButton.TabIndex = 2;
+            this.applyButton.Text = "APPLY";
+            this.applyButton.UseVisualStyleBackColor = true;
+            this.applyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
-            // Settings
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(120, 310);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 1;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(234, 336);
-            this.Controls.Add(this.twitchBotCheck);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.twitchBotToken);
-            this.Controls.Add(this.twitchbotUsername);
-            this.Controls.Add(this.twitchChannelname);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.refreshDrop);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.skinDrop);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.regionDrop);
+            this.ClientSize = new System.Drawing.Size(234, 350);
+            this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.regionLabel);
+            this.Controls.Add(this.regionDropdown);
+            this.Controls.Add(this.skinLabel);
+            this.Controls.Add(this.skinDropdown);
+            this.Controls.Add(this.refreshLabel);
+            this.Controls.Add(this.refreshDropdown);
+            this.Controls.Add(this.twitchBotSettingsSectionLabel);
+            this.Controls.Add(this.twitchBotCheckbox);
+            this.Controls.Add(this.twitchChannelNameTextbox);
+            this.Controls.Add(this.twitchbotUsernameTextbox);
+            this.Controls.Add(this.twitchBotTokenTextbox);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.usernameTextBox);
-            this.Name = "Settings";
+            this.Name = "SettingsForm";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);
@@ -252,21 +228,19 @@ namespace ValorantOverlay.App
         #endregion
 
         private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.ComboBox regionDrop;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox ski;
-        private System.Windows.Forms.ComboBox skinDrop;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox refreshDrop;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox twitchChannelname;
-        private System.Windows.Forms.TextBox twitchbotUsername;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox twitchBotToken;
-        private System.Windows.Forms.CheckBox twitchBotCheck;
+        private System.Windows.Forms.Label regionLabel;
+        private System.Windows.Forms.ComboBox regionDropdown;
+        private System.Windows.Forms.Label skinLabel;
+        private System.Windows.Forms.ComboBox skinDropdown;
+        private System.Windows.Forms.Label refreshLabel;
+        private System.Windows.Forms.ComboBox refreshDropdown;
+        private System.Windows.Forms.Label twitchBotSettingsSectionLabel;
+        private System.Windows.Forms.CheckBox twitchBotCheckbox;
+        private System.Windows.Forms.TextBox twitchChannelNameTextbox;
+        private System.Windows.Forms.TextBox twitchbotUsernameTextbox;
+        private System.Windows.Forms.TextBox twitchBotTokenTextbox;
+        private System.Windows.Forms.Button applyButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

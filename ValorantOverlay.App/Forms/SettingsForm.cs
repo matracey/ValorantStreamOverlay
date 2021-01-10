@@ -1,70 +1,62 @@
 ﻿using System;
 using System.Windows.Forms;
+using ValorantOverlay.App.Models;
 
-namespace ValorantOverlay.App
+namespace ValorantOverlay.App.Forms
 {
     public partial class SettingsForm : Form
     {
-        public SettingsForm()
+        private IAppUserSettings _userSettings;
+
+        public SettingsForm(IAppUserSettings userSettings)
         {
+            _userSettings = userSettings;
             InitializeComponent();
         }
-
-        private void applyButton_Click(object sender, EventArgs e)
-        {
-            ApplySettings();
-        }
-
 
         void ApplySettings()
         {
             // Save Overlay Settings
-            Properties.Settings.Default.username = usernameTextBox.Text;
-            Properties.Settings.Default.password = passwordTextBox.Text;
-            Properties.Settings.Default.region = regionDrop.SelectedIndex;
-            Properties.Settings.Default.skin = skinDrop.SelectedIndex;
-            Properties.Settings.Default.refresh = refreshDrop.SelectedIndex;
+            _userSettings.Username = usernameTextBox.Text;
+            _userSettings.Password = passwordTextBox.Text;
+            _userSettings.Region = regionDropdown.SelectedIndex;
+            _userSettings.Skin = skinDropdown.SelectedIndex;
+            _userSettings.Refresh = refreshDropdown.SelectedIndex;
 
             // Save Twitch bot settings
-            Properties.Settings.Default.twitchbotEnabled = twitchBotCheck.Checked;
-            Properties.Settings.Default.twitchBotToken = twitchBotToken.Text;
-            Properties.Settings.Default.twitchBotUsername = twitchbotUsername.Text;
-            Properties.Settings.Default.twitchChannel = twitchChannelname.Text;
+            _userSettings.TwitchbotEnabled = twitchBotCheckbox.Checked;
+            _userSettings.TwitchBotToken = twitchBotTokenTextbox.Text;
+            _userSettings.TwitchBotUsername = twitchbotUsernameTextbox.Text;
+            _userSettings.TwitchChannel = twitchChannelNameTextbox.Text;
 
-            Properties.Settings.Default.Save();
-            //After Setting user inputs to settings, ask user to reboot program :)
-            DialogResult dialogResult =
-                MessageBox.Show("Please reboot overlay, for new settings to apply.", "Reboot to apply", MessageBoxButtons.OK);
-
-            if (dialogResult == DialogResult.OK)
-                Environment.Exit(1);
-            else
-                Environment.Exit(1);
-
-
-
-
+            _userSettings.Save();
+            Close();
         }
 
         private void Settings_Load(object sender, EventArgs e)
         {
             //Overlay Loading
-            usernameTextBox.Text = Properties.Settings.Default.username;
-            passwordTextBox.Text = Properties.Settings.Default.password;
-            regionDrop.SelectedIndex = Properties.Settings.Default.region;
-            skinDrop.SelectedIndex = Properties.Settings.Default.skin;
-            refreshDrop.SelectedIndex = Properties.Settings.Default.refresh;
+            usernameTextBox.Text = _userSettings.Username;
+            passwordTextBox.Text = _userSettings.Password;
+            regionDropdown.SelectedIndex = _userSettings.Region;
+            skinDropdown.SelectedIndex = _userSettings.Skin;
+            refreshDropdown.SelectedIndex = _userSettings.Refresh;
             
             //Twitch Bot Loading
-            twitchChannelname.Text = Properties.Settings.Default.twitchChannel;
-            twitchBotToken.Text = Properties.Settings.Default.twitchBotToken;
-            twitchbotUsername.Text = Properties.Settings.Default.twitchBotUsername;
-            twitchBotCheck.Checked = Properties.Settings.Default.twitchbotEnabled;
+            twitchChannelNameTextbox.Text = _userSettings.TwitchChannel;
+            twitchBotTokenTextbox.Text = _userSettings.TwitchBotToken;
+            twitchbotUsernameTextbox.Text = _userSettings.TwitchBotUsername;
+            twitchBotCheckbox.Checked = _userSettings.TwitchbotEnabled;
         }
 
-        private void cancelButton_Click(object sender, EventArgs e)
+        private void ApplyButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ApplySettings();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
