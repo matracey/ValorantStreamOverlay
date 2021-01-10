@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing.Text;
 using System.IO;
+using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Text.Json;
 using System.Windows.Forms;
@@ -56,6 +58,17 @@ namespace ValorantOverlay.App
 
         private static void ConfigureServices(IServiceCollection services)
         {
+            // System.Net
+            services.AddSingleton<CookieContainer>();
+
+            // System.Net.Http
+            services.AddHttpClient(HttpClientName.NorthAmerica , c => c.BaseAddress = new Uri("https://pd.na.a.pvp.net")).ConfigurePrimaryHttpMessageHandler(c => new HttpClientHandler { CookieContainer = c.GetRequiredService<CookieContainer>() });
+            services.AddHttpClient(HttpClientName.Europe, c => c.BaseAddress = new Uri("https://pd.eu.a.pvp.net")).ConfigurePrimaryHttpMessageHandler(c => new HttpClientHandler { CookieContainer = c.GetRequiredService<CookieContainer>() });
+            services.AddHttpClient(HttpClientName.Korea, c => c.BaseAddress = new Uri("https://pd.kr.a.pvp.net")).ConfigurePrimaryHttpMessageHandler(c => new HttpClientHandler { CookieContainer = c.GetRequiredService<CookieContainer>() });
+            services.AddHttpClient(HttpClientName.AsiaPacific, c => c.BaseAddress = new Uri("https://pd.ap.a.pvp.net")).ConfigurePrimaryHttpMessageHandler(c => new HttpClientHandler { CookieContainer = c.GetRequiredService<CookieContainer>() });
+            services.AddHttpClient(HttpClientName.AuthRiot, c => c.BaseAddress = new Uri("https://auth.riotgames.com/")).ConfigurePrimaryHttpMessageHandler(c => new HttpClientHandler { CookieContainer = c.GetRequiredService<CookieContainer>() });
+            services.AddHttpClient(HttpClientName.EntitlementsAuthRiot, c => c.BaseAddress = new Uri("https://entitlements.auth.riotgames.com/")).ConfigurePrimaryHttpMessageHandler(c => new HttpClientHandler { CookieContainer = c.GetRequiredService<CookieContainer>() });
+
             // ValorantOverlay.Core.Models
             services.AddSingleton<IRankList, RankList>(provider =>
             {
@@ -73,6 +86,9 @@ namespace ValorantOverlay.App
 
             // ValorantOverlay.Core.Services
             services.AddSingleton<IRankManager, RankManager>();
+            services.AddSingleton<IRiotAuthenticator, RiotAuthenticator>();
+            services.AddSingleton<IMatchManager, MatchManager>();
+            services.AddSingleton<IStateManager, StateManager>();
 
             // ValorantOverlay.App.Extensions
             services.AddAppUserSettings();
