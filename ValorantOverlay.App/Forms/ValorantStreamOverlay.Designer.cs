@@ -32,9 +32,9 @@ namespace ValorantOverlay.App.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ValorantStreamOverlay));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.recentGame3 = new System.Windows.Forms.Label();
-            this.recentGame2 = new System.Windows.Forms.Label();
             this.recentGame1 = new System.Windows.Forms.Label();
+            this.recentGame2 = new System.Windows.Forms.Label();
+            this.recentGame3 = new System.Windows.Forms.Label();
             this.rankIconBox = new System.Windows.Forms.PictureBox();
             this.rankPointsElo = new System.Windows.Forms.Label();
             this.rankingLabel = new System.Windows.Forms.Label();
@@ -49,9 +49,9 @@ namespace ValorantOverlay.App.Forms
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.recentGame3);
-            this.mainPanel.Controls.Add(this.recentGame2);
             this.mainPanel.Controls.Add(this.recentGame1);
+            this.mainPanel.Controls.Add(this.recentGame2);
+            this.mainPanel.Controls.Add(this.recentGame3);
             this.mainPanel.Controls.Add(this.rankIconBox);
             this.mainPanel.Controls.Add(this.rankPointsElo);
             this.mainPanel.Controls.Add(this.rankingLabel);
@@ -62,75 +62,77 @@ namespace ValorantOverlay.App.Forms
             this.mainPanel.Size = new System.Drawing.Size(398, 143);
             this.mainPanel.TabIndex = 0;
             // 
-            // recentGame3
-            // 
-            this.recentGame3.AutoSize = true;
-            this.recentGame3.BackColor = System.Drawing.Color.Black;
-            this.recentGame3.Font = new System.Drawing.Font("Anton", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.recentGame3.ForeColor = System.Drawing.Color.White;
-            this.recentGame3.Location = new System.Drawing.Point(346, 86);
-            this.recentGame3.Name = "recentGame3";
-            this.recentGame3.Size = new System.Drawing.Size(48, 36);
-            this.recentGame3.TabIndex = 6;
-            this.recentGame3.Text = "+00";
-            // 
-            // recentGame2
-            // 
-            this.recentGame2.AutoSize = true;
-            this.recentGame2.BackColor = System.Drawing.Color.Black;
-            this.recentGame2.Font = new System.Drawing.Font("Anton", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.recentGame2.ForeColor = System.Drawing.Color.White;
-            this.recentGame2.Location = new System.Drawing.Point(285, 86);
-            this.recentGame2.Name = "recentGame2";
-            this.recentGame2.Size = new System.Drawing.Size(48, 36);
-            this.recentGame2.TabIndex = 5;
-            this.recentGame2.Text = "+00";
-            // 
             // recentGame1
             // 
-            this.recentGame1.AutoSize = true;
+            this.recentGame1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.recentGame1.BackColor = System.Drawing.Color.Black;
             this.recentGame1.Font = new System.Drawing.Font("Anton", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.recentGame1.ForeColor = System.Drawing.Color.White;
-            this.recentGame1.Location = new System.Drawing.Point(225, 86);
+            this.recentGame1.Location = new System.Drawing.Point(221, 77);
             this.recentGame1.Name = "recentGame1";
-            this.recentGame1.Size = new System.Drawing.Size(48, 36);
-            this.recentGame1.TabIndex = 4;
+            this.recentGame1.Size = new System.Drawing.Size(46, 50);
+            this.recentGame1.TabIndex = 103;
             this.recentGame1.Text = "+00";
+            this.recentGame1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // recentGame2
+            // 
+            this.recentGame2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.recentGame2.BackColor = System.Drawing.Color.Black;
+            this.recentGame2.Font = new System.Drawing.Font("Anton", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recentGame2.ForeColor = System.Drawing.Color.White;
+            this.recentGame2.Location = new System.Drawing.Point(284, 77);
+            this.recentGame2.Name = "recentGame2";
+            this.recentGame2.Size = new System.Drawing.Size(46, 50);
+            this.recentGame2.TabIndex = 102;
+            this.recentGame2.Text = "+00";
+            this.recentGame2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // recentGame3
+            // 
+            this.recentGame3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.recentGame3.BackColor = System.Drawing.Color.Black;
+            this.recentGame3.Font = new System.Drawing.Font("Anton", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recentGame3.ForeColor = System.Drawing.Color.White;
+            this.recentGame3.Location = new System.Drawing.Point(345, 77);
+            this.recentGame3.Margin = new System.Windows.Forms.Padding(0);
+            this.recentGame3.Name = "recentGame3";
+            this.recentGame3.Size = new System.Drawing.Size(46, 50);
+            this.recentGame3.TabIndex = 101;
+            this.recentGame3.Text = "+00";
+            this.recentGame3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rankIconBox
             // 
             this.rankIconBox.BackColor = System.Drawing.Color.Transparent;
             this.rankIconBox.Image = ((System.Drawing.Image)(resources.GetObject("rankIconBox.Image")));
-            this.rankIconBox.Location = new System.Drawing.Point(12, 67);
+            this.rankIconBox.Location = new System.Drawing.Point(15, 67);
             this.rankIconBox.Name = "rankIconBox";
-            this.rankIconBox.Size = new System.Drawing.Size(65, 65);
+            this.rankIconBox.Size = new System.Drawing.Size(65, 66);
             this.rankIconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rankIconBox.TabIndex = 3;
             this.rankIconBox.TabStop = false;
             // 
             // rankPointsElo
             // 
-            this.rankPointsElo.AutoSize = true;
             this.rankPointsElo.Font = new System.Drawing.Font("Anton", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rankPointsElo.ForeColor = System.Drawing.Color.White;
-            this.rankPointsElo.Location = new System.Drawing.Point(216, 9);
+            this.rankPointsElo.Location = new System.Drawing.Point(213, 0);
             this.rankPointsElo.Name = "rankPointsElo";
-            this.rankPointsElo.Size = new System.Drawing.Size(182, 36);
+            this.rankPointsElo.Size = new System.Drawing.Size(185, 57);
             this.rankPointsElo.TabIndex = 2;
-            this.rankPointsElo.Text = "000 RP | 0000 ELO";
-            this.rankPointsElo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rankPointsElo.Text = "000 RR | 0000 TRR";
+            this.rankPointsElo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // rankingLabel
             // 
-            this.rankingLabel.AutoSize = true;
             this.rankingLabel.BackColor = System.Drawing.Color.Transparent;
             this.rankingLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rankingLabel.Font = new System.Drawing.Font("Anton", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rankingLabel.ForeColor = System.Drawing.Color.White;
             this.rankingLabel.Location = new System.Drawing.Point(0, 0);
             this.rankingLabel.Name = "rankingLabel";
-            this.rankingLabel.Size = new System.Drawing.Size(125, 56);
+            this.rankingLabel.Size = new System.Drawing.Size(150, 57);
             this.rankingLabel.TabIndex = 1;
             this.rankingLabel.Text = "INVALID";
             this.rankingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,7 +179,6 @@ namespace ValorantOverlay.App.Forms
             this.Text = "Valorant Overlay";
             this.Load += new System.EventHandler(this.ValorantStreamOverlay_Load);
             this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rankIconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPic)).EndInit();
             this.contextMenu.ResumeLayout(false);
@@ -192,8 +193,8 @@ namespace ValorantOverlay.App.Forms
         public System.Windows.Forms.PictureBox rankIconBox;
         public System.Windows.Forms.Label rankPointsElo;
         public System.Windows.Forms.Label recentGame1;
-        public System.Windows.Forms.Label recentGame3;
         public System.Windows.Forms.Label recentGame2;
+        public System.Windows.Forms.Label recentGame3;
         private System.Windows.Forms.ContextMenuStrip contextMenu;
         public System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
         public System.Windows.Forms.PictureBox backgroundPic;
