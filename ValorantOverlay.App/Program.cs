@@ -8,6 +8,7 @@ using System.IO;
 using System.Reflection;
 using System.Text.Json;
 using System.Windows.Forms;
+using ValorantOverlay.App.Extensions;
 using ValorantOverlay.App.Fonts;
 using ValorantOverlay.App.Forms;
 using ValorantOverlay.App.Helpers;
@@ -72,6 +73,9 @@ namespace ValorantOverlay.App
 
             // ValorantOverlay.Core.Services
             services.AddSingleton<IRankManager, RankManager>();
+
+            // ValorantOverlay.App.Extensions
+            services.AddAppUserSettings();
 
             // ValorantOverlay.App.Services
             services.AddSingleton<IUpdateService, UpdateService>();
