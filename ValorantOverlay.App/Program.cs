@@ -105,6 +105,7 @@ namespace ValorantOverlay.App
             services.AddSingleton<AntonRegular>();
 
             // ValorantOverlay.App.Forms
+            services.AddScoped<SettingsForm>();
             services.AddScoped<ValorantStreamOverlay>();
         }
     }

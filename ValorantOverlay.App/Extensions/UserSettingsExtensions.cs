@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using ValorantOverlay.App.Models;
+using ValorantOverlay.App.Properties;
 using ValorantOverlay.Core.Models;
 
 namespace ValorantOverlay.App.Extensions
@@ -13,31 +14,31 @@ namespace ValorantOverlay.App.Extensions
         {
             var settings = new AppUserSettings
             {
-                Username = Properties.Settings.Default.username,
-                Password = Properties.Settings.Default.password,
-                Region = Properties.Settings.Default.region,
-                Refresh = Properties.Settings.Default.refresh,
-                Skin = Properties.Settings.Default.skin,
-                TwitchChannel = Properties.Settings.Default.twitchChannel,
-                TwitchBotUsername = Properties.Settings.Default.twitchBotUsername,
-                TwitchBotToken = Properties.Settings.Default.twitchBotToken,
-                TwitchbotEnabled = Properties.Settings.Default.twitchbotEnabled,
+                Username = Settings.Default.username,
+                Password = Settings.Default.password,
+                Region = Settings.Default.region,
+                Refresh = Settings.Default.refresh,
+                Skin = Settings.Default.skin,
+                TwitchChannel = Settings.Default.twitchChannel,
+                TwitchBotUsername = Settings.Default.twitchBotUsername,
+                TwitchBotToken = Settings.Default.twitchBotToken,
+                TwitchbotEnabled = Settings.Default.twitchbotEnabled,
             };
             settings.Save();
 
             settings.UserSettingsUpdated += settings =>
             {
-                Properties.Settings.Default.username = settings.Username;
-                Properties.Settings.Default.password = settings.Password;
-                Properties.Settings.Default.region = settings.Region;
-                Properties.Settings.Default.refresh = settings.Refresh;
-                Properties.Settings.Default.skin = settings.Skin;
-                Properties.Settings.Default.twitchChannel = settings.TwitchChannel;
-                Properties.Settings.Default.twitchBotUsername = settings.TwitchBotUsername;
-                Properties.Settings.Default.twitchBotToken = settings.TwitchBotToken;
-                Properties.Settings.Default.twitchbotEnabled = settings.TwitchbotEnabled;
+                Settings.Default.username = settings.Username;
+                Settings.Default.password = settings.Password;
+                Settings.Default.region = settings.Region;
+                Settings.Default.refresh = settings.Refresh;
+                Settings.Default.skin = settings.Skin;
+                Settings.Default.twitchChannel = settings.TwitchChannel;
+                Settings.Default.twitchBotUsername = settings.TwitchBotUsername;
+                Settings.Default.twitchBotToken = settings.TwitchBotToken;
+                Settings.Default.twitchbotEnabled = settings.TwitchbotEnabled;
 
-                Properties.Settings.Default.Save();
+                Settings.Default.Save();
             };
 
             services.AddSingleton<IUserSettings, UserSettings>(c => settings);

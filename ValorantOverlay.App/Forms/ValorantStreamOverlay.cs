@@ -8,11 +8,13 @@ namespace ValorantOverlay.App.Forms
 {
     public partial class ValorantStreamOverlay : Form
     {
+        private readonly SettingsForm _settingsForm;
         private readonly IUpdateService _updateService;
         private readonly AntonRegular _font;
 
-        public ValorantStreamOverlay(UpdateService updateService, AntonRegular font)
+        public ValorantStreamOverlay(SettingsForm settingsForm, UpdateService updateService, AntonRegular font)
         {
+            _settingsForm = settingsForm;
             _updateService = updateService;
             _font = font;
             InitializeComponent();
@@ -47,8 +49,7 @@ namespace ValorantOverlay.App.Forms
 
         private void SettingsMenuItem_Click(object sender, EventArgs e)
         {
-            Settings settingsPage = new Settings();
-            settingsPage.ShowDialog();
+            _settingsForm.ShowDialog();
         }
     }
 }
