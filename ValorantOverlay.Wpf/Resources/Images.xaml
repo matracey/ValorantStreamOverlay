@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_00" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_00.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_01" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_01.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_02" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_02.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_03" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_03.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_04" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_04.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_05" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_05.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_06" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_06.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_07" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_07.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_08" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_08.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_09" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_09.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_10" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_10.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_11" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_11.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_12" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_12.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_13" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_13.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_14" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_14.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_15" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_15.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_16" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_16.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_17" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_17.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_18" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_18.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_19" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_19.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_20" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_20.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_21" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_21.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_22" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_22.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_23" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_23.png"></BitmapImage>
+    <BitmapImage x:Key="TX_CompetitiveTier_Large_24" UriSource=".\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_24.png"></BitmapImage>
+</ResourceDictionary>

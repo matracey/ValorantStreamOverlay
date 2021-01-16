@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:ValorantOverlay.Wpf.Views"
         mc:Ignorable="d"
         Title="Valorant Stream Overlay" Height="200" Width="420" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <ResourceDictionary Source="..\Resources\Images.xaml" />
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -23,6 +26,7 @@
         <TextBlock x:Name="rankPointsElo" Margin="5, 0, 5, 0" Grid.Row="0" Grid.Column="1" FontFamily="Anton" FontSize="28" Text="000 RR | 0000 TRR" Foreground="#FFFFFF" TextAlignment="Right" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
         
         <!-- Bottom Section Content -->
+        <Image x:Name="rankIconBox" Grid.Row="1" Grid.Column="0" Source="{DynamicResource TX_CompetitiveTier_Large_00}" Height="52" HorizontalAlignment="Left" Margin="10, 0, 10, 0" />
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10, 0, 10, 0" HorizontalAlignment="Right" Orientation="Horizontal">
             <Border CornerRadius="7.5" Width="50" Height="50" Background="#000000" Margin="5, 0, 5, 0">
                 <TextBlock x:Name="recentGame1" FontFamily="Anton" FontSize="16" Text="+0" Foreground="#FFFFFF" TextAlignment="Center" VerticalAlignment="Center" />

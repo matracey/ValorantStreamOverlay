@@ -6,4 +6,32 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_00.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_01.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_02.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_03.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_04.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_05.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_06.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_07.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_08.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_09.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_10.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_11.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_12.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_13.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_14.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_15.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_16.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_17.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_18.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_19.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_20.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_21.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_22.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_23.png" />
+    <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_24.png" />
+  </ItemGroup>
+
 </Project>
