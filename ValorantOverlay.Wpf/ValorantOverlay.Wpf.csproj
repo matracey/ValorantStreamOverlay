@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_00.png" />
     <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_01.png" />
     <Resource Include="Resources\Images\CompetitiveRankIcons\TX_CompetitiveTier_Large_02.png" />
