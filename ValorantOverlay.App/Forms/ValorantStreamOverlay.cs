@@ -21,21 +21,23 @@ namespace ValorantOverlay.App.Forms
         private readonly IUpdateService _updateService;
         private readonly AntonRegular _font;
         private readonly IStateManager _stateManager;
-
+        private readonly ITwitchManager _twitchService;
         private LongOperation _longOperation;
 
-        public ValorantStreamOverlay(SettingsForm settingsForm, IAppUserSettings userSettings, IUpdateService updateService, AntonRegular font, IStateManager stateManager)
+        public ValorantStreamOverlay(SettingsForm settingsForm, IAppUserSettings userSettings, IUpdateService updateService, AntonRegular font, IStateManager stateManager, ITwitchManager twitchService)
         {
             _settingsForm = settingsForm;
             _userSettings = userSettings;
             _updateService = updateService;
             _font = font;
             _stateManager = stateManager;
+            _twitchService = twitchService;
             _userSettings.UserSettingsUpdated += UserSettings_Updated;
             _stateManager.RecentMatchesUpdating += StateManager_RecentMatchesUpdating;
             _stateManager.RecentMatchesUpdated += StateManager_RecentMatchesUpdated;
             _stateManager.RankUpdating += StateManager_RankUpdating;
             _stateManager.RankUpdated += StateManager_RankUpdated;
+            _twitchService.ExceptionThrown += TwitchService_ExceptionThrown;
             Shown += ValorantStreamOverlay_Shown;
             InitializeComponent();
         }
@@ -43,6 +45,19 @@ namespace ValorantOverlay.App.Forms
         private void UserSettings_Updated(IAppUserSettings userSettings)
         {
             backgroundPic.Image = userSettings.Skin?.Value ?? Skin.BackgroundRed.Value;
+            _twitchService.Terminate();
+            if (userSettings.TwitchbotEnabled)
+            {
+                try
+                {
+                    _twitchService.Initialize();
+                } catch (Exception ex)
+                {
+                    _userSettings.TwitchbotEnabled = false;
+                    _userSettings.Save();
+                    MessageBox.Show($"Error connecting to Twitch. Make sure token and username are correct! Technical details: {ex.Message}");
+                }
+            }
         }
 
         #region Form Events
@@ -166,6 +181,13 @@ namespace ValorantOverlay.App.Forms
                 return;
             }
             MessageBox.Show($"An error has occurred. Technical details: {ex.Message}");
+        }
+        #endregion
+
+        #region TwitchService Events
+        private void TwitchService_ExceptionThrown(Exception ex)
+        {
+            MessageBox.Show($"Error connecting to Twitch. Make sure token and username are correct! Technical details: {ex.Message}");
         }
         #endregion
     }

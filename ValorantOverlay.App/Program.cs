@@ -89,6 +89,7 @@ namespace ValorantOverlay.App
             services.AddSingleton<IRiotAuthenticator, RiotAuthenticator>();
             services.AddSingleton<IMatchManager, MatchManager>();
             services.AddSingleton<IStateManager, StateManager>();
+            services.AddSingleton<ITwitchManager, TwitchManager>();
 
             // ValorantOverlay.App.Extensions
             services.AddAppUserSettings();
