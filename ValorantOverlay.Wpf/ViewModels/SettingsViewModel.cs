@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Media;
 using ValorantOverlay.Core.Models;
@@ -13,6 +14,8 @@ namespace ValorantOverlay.Wpf.ViewModels
         public IList<Skin> Skins => Skin.All;
 
         public IDictionary<string, int> RefreshIntervals => _refreshIntervals.ToDictionary(x => $"{x} seconds");
+
+        public IList<UserAccount> UserAccounts { get; set; } = new ObservableCollection<UserAccount>();
 
         public Color? SelectedColor
         {
@@ -75,5 +78,16 @@ namespace ValorantOverlay.Wpf.ViewModels
         }
 
         private readonly IList<int> _refreshIntervals = new List<int> { 30, 60 };
+
+        public void Clear() => ApplyValues(null);
+
+        public UserAccount ToUserAccount() => new UserAccount
+        {
+            Username = Username,
+            Password = Password,
+            Region = Region,
+            Skin = Skin,
+            RefreshInterval = RefreshInterval
+        };
     }
 }

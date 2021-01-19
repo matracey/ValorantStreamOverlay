@@ -30,6 +30,12 @@ namespace ValorantOverlay.Wpf.Views
             ToggleColorPickerVisibility(e.AddedItems.Cast<Skin>().Any(s => s.Text == "Custom"));
         }
 
+        private void AddAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            settingsVm.UserAccounts.Add(settingsVm.ToUserAccount());
+            settingsVm.Clear();
+        }
+
         private void ToggleColorPickerVisibility(bool isShown)
         {
             skinColorPicker.Visibility = isShown ? Visibility.Visible : Visibility.Collapsed;

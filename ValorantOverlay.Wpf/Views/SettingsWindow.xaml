@@ -55,6 +55,13 @@
                         <Label Content="Refresh" Width="120" />
                         <ComboBox x:Name="refreshCombobox" ItemsSource="{Binding RefreshIntervals, Mode=OneTime}" SelectedValue="{Binding SelectedRefreshInterval, Mode=TwoWay}" DisplayMemberPath="Key" />
                     </DockPanel>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="addAccountButton" Content="Add Account" Margin="0, 5, 0, 5" Grid.ColumnSpan="2" Click="AddAccountButton_Click"/>
+                    </Grid>
                 </StackPanel>
             </Grid>
         </GroupBox>
