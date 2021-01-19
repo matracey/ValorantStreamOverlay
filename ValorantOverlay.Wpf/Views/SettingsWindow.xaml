@@ -26,6 +26,10 @@
                         <Label Content="Riot Password" Width="120" />
                         <PasswordBox x:Name="passwordTextbox" VerticalAlignment="Stretch" c:PasswordBoxAssistant.BindPassword="True" c:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay}" />
                     </DockPanel>
+                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0, 5, 0, 5">
+                        <Label Content="Region" Width="120" />
+                        <ComboBox x:Name="regionCombobox" ItemsSource="{Binding Regions, Mode=OneTime}" DisplayMemberPath="Text" SelectedValue="{Binding Region, Mode=TwoWay}" />
+                    </DockPanel>
                 </StackPanel>
             </Grid>
         </GroupBox>
