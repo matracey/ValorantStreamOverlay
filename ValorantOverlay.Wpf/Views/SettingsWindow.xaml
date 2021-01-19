@@ -49,6 +49,7 @@
                                 <DataTemplate>
                                     <UniformGrid Columns="2" Rows="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                         <Button Click="EditUserAccountButton_Click" fa:Awesome.Content="Edit" FontSize="20" Foreground="CadetBlue" Margin="2.5, 0, 2.5, 0" />
+                                        <Button Click="RemoveUserAccountButton_Click" fa:Awesome.Content="Trash" FontSize="18" Foreground="DarkRed" Margin="2.5, 0, 2.5, 0" />
                                     </UniformGrid>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>

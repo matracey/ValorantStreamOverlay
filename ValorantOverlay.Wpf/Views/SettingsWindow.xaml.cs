@@ -59,6 +59,17 @@ namespace ValorantOverlay.Wpf.Views
             ToggleEditMode(true);
         }
 
+        private void RemoveUserAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            var model = (sender as Button).DataContext as UserAccount;
+            if (settingsVm.SelectedUserAccount?.Id == model?.Id)
+            {
+                settingsVm.SelectedUserAccount = null;
+                ToggleEditMode(false);
+            }
+            settingsVm.UserAccounts.Remove(model);
+        }
+
         private void ToggleColorPickerVisibility(bool isShown)
         {
             skinColorPicker.Visibility = isShown ? Visibility.Visible : Visibility.Collapsed;
