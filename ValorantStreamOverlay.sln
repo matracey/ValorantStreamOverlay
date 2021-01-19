@@ -3,18 +3,56 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValorantStreamOverlay", "ValorantStreamOverlay.csproj", "{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValorantOverlay.App", "ValorantOverlay.App\ValorantOverlay.App.csproj", "{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValorantOverlay.Core", "ValorantOverlay.Core\ValorantOverlay.Core.csproj", "{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "ValorantOverlay.App.Installer", "ValorantOverlay.App.Installer\ValorantOverlay.App.Installer.wixproj", "{B9BB9700-8727-4119-B5CB-2E3C48BDE069}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC} = {A54B680D-DE0E-4CF7-843D-2E52A307E3DC}
+	EndProjectSection
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "ValorantOverlay.App.Bootstrapper", "ValorantOverlay.App.Bootstrapper\ValorantOverlay.App.Bootstrapper.wixproj", "{2D59EC67-B254-4B8C-95E8-71985F28747F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9BB9700-8727-4119-B5CB-2E3C48BDE069} = {B9BB9700-8727-4119-B5CB-2E3C48BDE069}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Debug|x86.Build.0 = Debug|Any CPU
 		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Release|x86.ActiveCfg = Release|Any CPU
+		{A54B680D-DE0E-4CF7-843D-2E52A307E3DC}.Release|x86.Build.0 = Release|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA46BEF6-5C1C-411F-AEB4-ABCE73E588F3}.Release|x86.Build.0 = Release|Any CPU
+		{B9BB9700-8727-4119-B5CB-2E3C48BDE069}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B9BB9700-8727-4119-B5CB-2E3C48BDE069}.Debug|x86.ActiveCfg = Debug|x86
+		{B9BB9700-8727-4119-B5CB-2E3C48BDE069}.Debug|x86.Build.0 = Debug|x86
+		{B9BB9700-8727-4119-B5CB-2E3C48BDE069}.Release|Any CPU.ActiveCfg = Release|x86
+		{B9BB9700-8727-4119-B5CB-2E3C48BDE069}.Release|x86.ActiveCfg = Release|x86
+		{B9BB9700-8727-4119-B5CB-2E3C48BDE069}.Release|x86.Build.0 = Release|x86
+		{2D59EC67-B254-4B8C-95E8-71985F28747F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2D59EC67-B254-4B8C-95E8-71985F28747F}.Debug|x86.ActiveCfg = Debug|x86
+		{2D59EC67-B254-4B8C-95E8-71985F28747F}.Debug|x86.Build.0 = Debug|x86
+		{2D59EC67-B254-4B8C-95E8-71985F28747F}.Release|Any CPU.ActiveCfg = Release|x86
+		{2D59EC67-B254-4B8C-95E8-71985F28747F}.Release|x86.ActiveCfg = Release|x86
+		{2D59EC67-B254-4B8C-95E8-71985F28747F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

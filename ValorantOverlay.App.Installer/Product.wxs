@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="9cb61f41-56e1-41a9-9463-0939c2a5f48e" Name="Valorant Stream Overlay" Language="1033" Version="2.0.0.1" Manufacturer="RumbleMike" UpgradeCode="066ee5d8-4a8f-44e8-be55-7b3f157e9f0c">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="RumbleMike" Description="Installs the Valorant Stream Overlay application." />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+    
+    <Feature Id="ProductFeature" Title="Valorant Stream Overlay" Level="1">
+      <ComponentGroupRef Id="BinDirectory" />
+      <ComponentRef Id="DesktopShortcut" />
+    </Feature>
+  
+    <Property Id="INSTALLSHORTCUT" Value="1" Admin="yes" Secure="yes" />
+    <SetProperty Id="INSTALLSHORTCUT" Value="{}" After="AppSearch">INSTALLSHORTCUT=0</SetProperty>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Valorant Stream Overlay" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop"/>
+    </Directory>
+
+    <WixVariable Id="WixUILicenseRtf" Value="..\Resources\LICENSE.rtf" />
+    <WixVariable Id="WixUIDialogBmp" Value="..\Resources\WixUIDialogBmp.bmp" />
+    <WixVariable Id="WixUIBannerBmp" Value="..\Resources\WixUIBannerBmp.bmp" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER"></Property>
+    <UIRef Id="Custom_InstallDir"/>
+  </Fragment>
+  <Fragment>
+    <Icon Id="ValorantOverlay.App.ico" SourceFile="..\Resources\icon.ico"/>
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="DesktopShortcut" Guid="b1223813-3af7-47ac-8d7d-ae03391afc34">
+        <Condition>INSTALLSHORTCUT</Condition>
+        <Shortcut Id="ApplicationDesktopShortcut" 
+                  Name="Valorant Stream Overlay" 
+                  Target="[INSTALLFOLDER]ValorantOverlay.App.exe"
+                  WorkingDirectory="INSTALLFOLDER" 
+                  Icon="ValorantOverlay.App.ico" />
+        <RemoveFolder Id="DesktopFolder" On="uninstall" />
+        <RegistryKey Root="HKCU" Key="Software\!(Wix.Product)">
+          <RegistryValue Name="installed" Type="integer" Value="1" KeyPath="yes" />
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

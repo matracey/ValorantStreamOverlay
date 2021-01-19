@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+	<Bundle Name="Valorant Stream Overlay" Version="2.0.0.1" Manufacturer="RumbleMike" UpgradeCode="8158b6be-73ab-44f4-b4fa-03851b1f25e9">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication
+        LicenseFile="..\Resources\LICENSE.rtf"
+        LogoFile="..\Resources\icon.png" 
+        ThemeFile="CustomTheme.xml" />
+    </BootstrapperApplicationRef>
+	  <Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]Valorant Stream Overlay" Persisted="yes" />
+    <Variable Name="DesktopShortcutCheckbox" Type="numeric" Value="1" Persisted="yes" />
+
+    <Chain>
+      <PackageGroupRef Id="ValorantOverlay.App"/>
+	  </Chain>
+	</Bundle>
+  <Fragment Id="Application">
+    <PackageGroup Id="ValorantOverlay.App">
+      <MsiPackage Id="pkg_ValorantOverlay.App"
+                  Cache="no"
+                  Compressed="yes"
+                  Permanent="no"
+                  Vital="yes"
+                  SourceFile="$(var.AppInstallerDir)\Valorant Stream Overlay.msi">
+        <MsiProperty Name="INSTALLFOLDER" Value="[InstallFolder]" />
+        <MsiProperty Name="INSTALLSHORTCUT" Value="[DesktopShortcutCheckbox]"/>
+      </MsiPackage>
+    </PackageGroup>
+  </Fragment>
+</Wix>
