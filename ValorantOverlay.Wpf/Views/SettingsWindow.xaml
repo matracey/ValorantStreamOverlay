@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:c="clr-namespace:ValorantOverlay.Wpf.Controls"
         mc:Ignorable="d"
         Title="SettingsWindow" Height="650" Width="420" ResizeMode="CanMinimize" Loaded="SettingsWindow_Loaded">
@@ -43,6 +44,15 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
+                        <DataGridTemplateColumn Width="80">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <UniformGrid Columns="2" Rows="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                        <Button Click="EditUserAccountButton_Click" fa:Awesome.Content="Edit" FontSize="20" Foreground="CadetBlue" Margin="2.5, 0, 2.5, 0" />
+                                    </UniformGrid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel Grid.Row="1" VerticalAlignment="Stretch" Margin="5, 0, 5, 0">
@@ -88,6 +98,7 @@
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Button x:Name="addAccountButton" Content="Add Account" Margin="0, 5, 0, 5" Grid.ColumnSpan="2" Click="AddAccountButton_Click"/>
+                        <Button x:Name="cancelEditButton" Content="Cancel" Margin="2.5, 5, 0, 5" Grid.Column="1" Visibility="Collapsed" Click="CancelEditButton_Click"/>
                     </Grid>
                 </StackPanel>
             </Grid>

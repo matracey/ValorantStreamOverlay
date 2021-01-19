@@ -17,6 +17,17 @@ namespace ValorantOverlay.Wpf.ViewModels
 
         public IList<UserAccount> UserAccounts { get; set; } = new ObservableCollection<UserAccount>();
 
+        public UserAccount SelectedUserAccount
+        {
+            get => selectedUserAccount;
+            set
+            {
+                ApplyValues(value);
+                selectedUserAccount = value;
+                NotifyPropertyChanged();
+            }
+        }
+
         public Color? SelectedColor
         {
             get => Skin?.Value?.Color;
@@ -78,6 +89,7 @@ namespace ValorantOverlay.Wpf.ViewModels
         }
 
         private readonly IList<int> _refreshIntervals = new List<int> { 30, 60 };
+        private UserAccount selectedUserAccount;
 
         public void Clear() => ApplyValues(null);
 
