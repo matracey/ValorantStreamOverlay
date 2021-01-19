@@ -3,8 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c="clr-namespace:ValorantOverlay.Wpf.Controls"
         mc:Ignorable="d"
         Title="SettingsWindow" Height="650" Width="420" ResizeMode="CanMinimize">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.25*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Riot Accounts" Margin="5, 2.5, 5, 2.5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="1.125*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1" VerticalAlignment="Stretch" Margin="5, 0, 5, 0">
+                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0, 5, 0, 5">
+                        <Label Content="Riot Username" Width="120" />
+                        <TextBox x:Name="usernameTextbox" HorizontalAlignment="Stretch" Text="{Binding Username, Mode=TwoWay}" VerticalAlignment="Stretch" />
+                    </DockPanel>
+                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0, 5, 0, 5">
+                        <Label Content="Riot Password" Width="120" />
+                        <PasswordBox x:Name="passwordTextbox" VerticalAlignment="Stretch" c:PasswordBoxAssistant.BindPassword="True" c:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay}" />
+                    </DockPanel>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
