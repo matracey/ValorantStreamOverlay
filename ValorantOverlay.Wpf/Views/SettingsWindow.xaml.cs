@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using ValorantOverlay.Wpf.ViewModels;
 
 namespace ValorantOverlay.Wpf.Views
 {
@@ -8,9 +9,12 @@ namespace ValorantOverlay.Wpf.Views
     /// </summary>
     public partial class SettingsWindow : Window
     {
+        private readonly SettingsViewModel settingsVm = new SettingsViewModel();
+
         public SettingsWindow()
         {
             InitializeComponent();
+            DataContext = settingsVm;
         }
     }
 }
