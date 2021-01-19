@@ -12,6 +12,8 @@ namespace ValorantOverlay.Wpf.ViewModels
 
         public IList<Skin> Skins => Skin.All;
 
+        public IDictionary<string, int> RefreshIntervals => _refreshIntervals.ToDictionary(x => $"{x} seconds");
+
         public Color? SelectedColor
         {
             get => Skin?.Value?.Color;
@@ -51,5 +53,27 @@ namespace ValorantOverlay.Wpf.ViewModels
                 }
             }
         }
+
+        public KeyValuePair<string, int> SelectedRefreshInterval
+        {
+            get => new KeyValuePair<string, int>($"{RefreshInterval} seconds", RefreshInterval);
+            set => RefreshInterval = value.Value;
+        }
+
+        public override int RefreshInterval
+        {
+            get => _refreshInterval;
+            set
+            {
+                if (value != _refreshInterval)
+                {
+                    _refreshInterval = value;
+                    NotifyPropertyChanged();
+                    NotifyPropertyChanged("SelectedRefreshInterval");
+                }
+            }
+        }
+
+        private readonly IList<int> _refreshIntervals = new List<int> { 30, 60 };
     }
 }

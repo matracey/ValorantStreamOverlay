@@ -51,6 +51,10 @@
                             <wpfx:ColorPicker x:Name="skinColorPicker" Grid.Column="1" Margin="5, 0, 0, 0" SelectedColor="{Binding SelectedColor, Mode=TwoWay}" />
                         </Grid>
                     </DockPanel>
+                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0, 5, 0, 5">
+                        <Label Content="Refresh" Width="120" />
+                        <ComboBox x:Name="refreshCombobox" ItemsSource="{Binding RefreshIntervals, Mode=OneTime}" SelectedValue="{Binding SelectedRefreshInterval, Mode=TwoWay}" DisplayMemberPath="Key" />
+                    </DockPanel>
                 </StackPanel>
             </Grid>
         </GroupBox>
