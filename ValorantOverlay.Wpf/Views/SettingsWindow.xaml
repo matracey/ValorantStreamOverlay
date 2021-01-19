@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:c="clr-namespace:ValorantOverlay.Wpf.Controls"
         mc:Ignorable="d"
-        Title="SettingsWindow" Height="650" Width="420" ResizeMode="CanMinimize">
+        Title="SettingsWindow" Height="650" Width="420" ResizeMode="CanMinimize" Loaded="SettingsWindow_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2.25*"></RowDefinition>
@@ -29,6 +30,26 @@
                     <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0, 5, 0, 5">
                         <Label Content="Region" Width="120" />
                         <ComboBox x:Name="regionCombobox" ItemsSource="{Binding Regions, Mode=OneTime}" DisplayMemberPath="Text" SelectedValue="{Binding Region, Mode=TwoWay}" />
+                    </DockPanel>
+                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0, 5, 0, 5">
+                        <Label Content="Skin" Width="120" />
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox x:Name="skinCombobox" ItemsSource="{Binding Skins, Mode=OneTime}" SelectedIndex="{Binding SelectedSkin}" Grid.Column="0" SelectionChanged="SkinCombobox_SelectionChanged">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <DockPanel Grid.Row="1" VerticalAlignment="Top">
+                                            <Rectangle Fill="{Binding Value}" Stroke="Black" Width="25" />
+                                            <TextBlock Text="{Binding Text}" HorizontalAlignment="Stretch" Margin="5,0,0,0" />
+                                        </DockPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <wpfx:ColorPicker x:Name="skinColorPicker" Grid.Column="1" Margin="5, 0, 0, 0" SelectedColor="{Binding SelectedColor, Mode=TwoWay}" />
+                        </Grid>
                     </DockPanel>
                 </StackPanel>
             </Grid>
